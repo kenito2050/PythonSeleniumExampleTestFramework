@@ -104,14 +104,12 @@ py.test .\test_end_to_end.py --browser edge --env uat --html=test_results/report
 
 After test execution, report will be generated in Tests\test_results with name = "report.html".
 
-(4) Screenshots
-Screenshots are created using Selenium Webdriver save_screenshot() function. During test execution, screenshots are saved to Screenshots directory. Screenshots are
+(4) Screenshots are created using Selenium Webdriver save_screenshot() function. During test execution, screenshots are saved to Screenshots directory. Screenshots are
 are prepended with either "Pass" or "Fail" and include test case name (tc_name). Screenshots are created in PNG format.
 
             self.driver.save_screenshot("..\\Screenshots\\" + "PASS_" + tc_name + "_1" + ".png")
 
-(5) Logging 
-Logging function is enabled using Log4j Library. The log file will be created in the "Tests" directory with file name "logfile.log".
+(5) Logging function is enabled using Log4j Library. The log file will be created in the "Tests" directory with file name "logfile.log".
 The getLogger method is contained in BaseClass.py.
 
     def getLogger(self):
@@ -124,7 +122,7 @@ The getLogger method is contained in BaseClass.py.
         logger.setLevel(logging.DEBUG)
         return logger
 
-In the test script:
+Include statements like the following to enable logging in the test script:
 
 log = self.getLogger()
 log.info("getting products")
