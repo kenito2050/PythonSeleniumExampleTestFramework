@@ -140,6 +140,6 @@ log.info("getting products")
 
 (7) Asserts used in test case
 
-# Confirm success message
+Confirm success message
             successText = confirmPage.getSuccessMessage().text
             assert "Success! Thank you!" in successText
